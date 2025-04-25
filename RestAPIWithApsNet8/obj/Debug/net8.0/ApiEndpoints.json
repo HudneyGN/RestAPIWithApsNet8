@@ -1,0 +1,123 @@
+[
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Div",
+    "RelativePath": "Calculator/div/{firstNumber}/{secundNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secundNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Media",
+    "RelativePath": "Calculator/media/{firstNumber}/{secundNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secundNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Mult",
+    "RelativePath": "Calculator/mult/{firstNumber}/{secundNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secundNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Sqrt",
+    "RelativePath": "Calculator/sqrt/{firstNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Sub",
+    "RelativePath": "Calculator/sub/{firstNumber}/{secundNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secundNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.CalculatorController",
+    "Method": "Sum",
+    "RelativePath": "Calculator/sum/{firstNumber}/{secundNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secundNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

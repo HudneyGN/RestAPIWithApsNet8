@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\RestAPIWithApsNet8.props" />
+</Project>
