@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Hudney\.nuget\packages\" />
     <SourceRoot Include="D:\executaveis\VisualStudio2022\ComponetesSDK\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.13\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.13\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
+  </ImportGroup>
 </Project>

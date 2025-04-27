@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using RestAPIWithApsNet8.Model.Context;
 using RestAPIWithApsNet8.Services.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IPersonService, PersonServiceImplementation>();
+
+//add string de conexão com MySql
+var connection = builder.Configuration["MySqlConnection:MySqlConnectionString"];
+builder.Services.AddDbContext<MySqlContext>(options => options.UseMySql(connection,
+    new MySqlServerVersion(new Version(8,0,3))));
 
 var app = builder.Build();
 

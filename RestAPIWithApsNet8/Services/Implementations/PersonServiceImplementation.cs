@@ -1,62 +1,89 @@
-﻿using RestAPIWithApsNet8.Model;
+﻿using System;
+using RestAPIWithApsNet8.Model;
+using RestAPIWithApsNet8.Model.Context;
 
 namespace RestAPIWithApsNet8.Services.Implementations
 {
     public class PersonServiceImplementation : IPersonService
     {
-        private volatile int _count;
-        public Person Create(Person person)
+        //private volatile int _count;
+        private MySqlContext _context;
+
+        public PersonServiceImplementation(MySqlContext context)
         {
-            return person;
+            _context = context;
         }
-
-        public void Delete(long id)
-        {
-
-        }
-
+        #region FindAll
         public List<Person> FindAll()
         {
-            List<Person> persons = new List<Person>();
-            for(int i = 0; i < 8; i++)
-            {
-                Person person = MockPerson(i);
-                persons.Add(person);
-            }
-            return persons;
+            return _context.persons.ToList();
         }
+        #endregion
+        #region FindById
         public Person FindById(long id)
         {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FirstName = "Léo",
-                LastName = "Gomes",
-                Address = "Paraty",
-                Gender = "Male"
-            };
+            return _context.persons.SingleOrDefault(p => p.Id.Equals(id)); // pesquisar SingleOrDefault(p => p.Id.Equals(id))
         }
-
-        public Person Update(Person person)
+        #endregion
+        #region Create
+        public Person Create(Person person)
         {
-            //lógica do update
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             return person;
         }
-
-        private Person MockPerson(int i)
+        #endregion
+        #region Update
+        public Person Update(Person person)
         {
-            return new Person
+            if (!Exists(person.Id)) return new Person();
+            var result = _context.persons.SingleOrDefault(p => p.Id.Equals(person.Id));
+            if (result != null)
             {
-                Id = IncrementAndGet(),
-                FirstName = "Person Name" + i,
-                LastName = "Person Last Name" + i,
-                Address = "some Address" + i,
-                Gender = "Male"
-            };
+                try
+                {
+                    _context.Entry(result).CurrentValues.SetValues(person);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return person;
         }
-        private long IncrementAndGet()
+        #endregion
+        #region Delete
+        public void Delete(long id)
         {
-            return Interlocked.Increment(ref _count);
+            var result = _context.persons.SingleOrDefault(p => p.Id.Equals(id));
+            if (result != null)
+            {
+                try
+                {
+                    _context.persons.Remove(result);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
         }
+        #endregion
+        #region Exists
+        private bool Exists(long id)
+        {
+            return _context.persons.Any(p => p.Id.Equals(id));
+        }
+        #endregion
     }
 }
