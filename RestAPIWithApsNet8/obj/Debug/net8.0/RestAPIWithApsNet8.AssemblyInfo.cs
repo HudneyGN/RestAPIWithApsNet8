@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestAPIWithApsNet8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62ca46f54ea414f328eb18e7a1a294983477db8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3495fc743443a2221cb0040794143d316ffda2b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("RestAPIWithApsNet8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RestAPIWithApsNet8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

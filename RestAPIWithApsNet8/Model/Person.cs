@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using RestAPIWithApsNet8.Model.Base;
 
 namespace RestAPIWithApsNet8.Model
 {
     [Table("person")] // no linus não localiza a tabela person
-    public class Person
+    public class Person 
     {
         [Column("id")]
         public long Id { get; set; }

@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\services\\implementations\\personserviceimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\services\\implementations\\personserviceimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\model\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\model\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PersonServiceImplementation.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Services\\Implementations\\PersonServiceImplementation.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Services\\Implementations\\PersonServiceImplementation.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Services\\Implementations\\PersonServiceImplementation.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Services\\Implementations\\PersonServiceImplementation.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAwCEAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Books.cs",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Books.cs",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Model\\Books.cs",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Books.cs",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Model\\Books.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:24:26.232Z"
+              "WhenOpened": "2025-04-30T19:00:52.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Person.cs",
               "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Person.cs",
               "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Model\\Person.cs",
               "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Person.cs",
               "RelativeToolTip": "RestAPIWithApsNet8\\Model\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:14:42.003Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\appsettings.json",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\appsettings.json",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\appsettings.json",
-              "RelativeToolTip": "RestAPIWithApsNet8\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-27T00:47:36.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MySqlContext.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Context\\MySqlContext.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Model\\Context\\MySqlContext.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Context\\MySqlContext.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Model\\Context\\MySqlContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T00:49:03.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Program.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Program.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Program.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T19:05:45.63Z",
+              "WhenOpened": "2025-04-30T19:00:48.863Z",
               "EditorCaption": ""
             }
           ]
