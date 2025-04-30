@@ -30,3 +30,7 @@ Este projeto é uma API RESTful desenvolvida com **ASP.NET 8**, utilizando **MyS
 ```bash
 git clone https://github.com/seu-usuario/RestAPIWithAspNet8.git
 cd RestAPIWithAspNet8
+2. Configure o appsettings.json
+"ConnectionStrings": {
+  "MySqlConnection": "Server=localhost;Database=RestAPI;User=root;Password=suaSenha;"
+}
