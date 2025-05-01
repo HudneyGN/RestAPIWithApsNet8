@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using RestAPIWithApsNet8.Model;
+﻿using Microsoft.EntityFrameworkCore;
 using RestAPIWithApsNet8.Model.Base;
 using RestAPIWithApsNet8.Model.Context;
 
@@ -29,7 +27,7 @@ namespace RestAPIWithApsNet8.Repository.Generic
             {
                 throw;
             }
-            
+
         }
 
         public void Delete(long id)
@@ -84,7 +82,7 @@ namespace RestAPIWithApsNet8.Repository.Generic
             {
                 return null;
             }
-           
+
         }
     }
 }

@@ -1,6 +1,7 @@
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using RestAPIWithApsNet8.Business;
+using RestAPIWithApsNet8.Data.VO;
 using RestAPIWithApsNet8.Model;
 
 namespace RestAPIWithApsNet8.Controllers
@@ -32,13 +33,13 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(person);
         }
         [HttpPost]
-        public IActionResult Post([FromBody] Person person)
+        public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest("Person Invalid");
             return Ok(_personService.Create(person));
         }
         [HttpPut]
-        public IActionResult Put([FromBody] Person person)
+        public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest("Person Invalid");
             return Ok(_personService.Update(person));

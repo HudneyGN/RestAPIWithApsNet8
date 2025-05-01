@@ -1,4 +1,7 @@
-﻿using RestAPIWithApsNet8.Model;
+﻿using System;
+using RestAPIWithApsNet8.Data.Converter.Implementations;
+using RestAPIWithApsNet8.Data.VO;
+using RestAPIWithApsNet8.Model;
 using RestAPIWithApsNet8.Repository;
 
 namespace RestAPIWithApsNet8.Business.Implementations
@@ -7,33 +10,39 @@ namespace RestAPIWithApsNet8.Business.Implementations
     {
         //private volatile int _count;
         private readonly IRepository<Books> _repository;
+        private readonly BooksConverter _converter;
 
         public BooksBusinessImplementation(IRepository<Books> repository)
         {
             _repository = repository;
+            _converter = new BooksConverter();
         }
         #region FindAll
-        public List<Books> FindAll()
+        public List<BooksVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.Parse(_repository.FindAll());
         }
         #endregion
         #region FindById
-        public Books FindById(long id)
+        public BooksVO FindById(long id)
         {
-            return _repository.FindById(id); // pesquisar SingleOrDefault(p => p.Id.Equals(id))
+            return _converter.Parse(_repository.FindById(id));
         }
         #endregion
         #region Create
-        public Books Create(Books book)
+        public BooksVO Create(BooksVO book)
         {
-            return _repository.Create(book);
+            var bookEntity = _converter.Parse(book);
+            bookEntity = _repository.Create(bookEntity);
+            return _converter.Parse(bookEntity);
         }
         #endregion
         #region Update
-        public Books Update(Books book)
+        public BooksVO Update(BooksVO book)
         {
-            return _repository.Update(book);
+            var bookEntity = _converter.Parse(book);
+            bookEntity = _repository.Update(bookEntity);
+            return _converter.Parse(bookEntity);
         }
         #endregion
         #region Delete

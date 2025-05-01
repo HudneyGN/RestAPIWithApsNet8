@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\model\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\model\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Books.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Books.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Model\\Books.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Books.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Model\\Books.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:00:52.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Person.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Person.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Model\\Person.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Model\\Person.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Model\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "PersonVO.cs",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:00:48.863Z",
+              "WhenOpened": "2025-05-01T00:58:54.401Z",
               "EditorCaption": ""
             }
           ]

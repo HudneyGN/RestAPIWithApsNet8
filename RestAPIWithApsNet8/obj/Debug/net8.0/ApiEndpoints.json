@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "book",
-        "Type": "RestAPIWithApsNet8.Model.Books",
+        "Type": "RestAPIWithApsNet8.Data.VO.BooksVO",
         "IsRequired": true
       },
       {
@@ -46,7 +46,7 @@
     "Parameters": [
       {
         "Name": "book",
-        "Type": "RestAPIWithApsNet8.Model.Books",
+        "Type": "RestAPIWithApsNet8.Data.VO.BooksVO",
         "IsRequired": true
       },
       {
@@ -125,7 +125,7 @@
     "Parameters": [
       {
         "Name": "person",
-        "Type": "RestAPIWithApsNet8.Model.Person",
+        "Type": "RestAPIWithApsNet8.Data.VO.PersonVO",
         "IsRequired": true
       },
       {
@@ -146,7 +146,7 @@
     "Parameters": [
       {
         "Name": "person",
-        "Type": "RestAPIWithApsNet8.Model.Person",
+        "Type": "RestAPIWithApsNet8.Data.VO.PersonVO",
         "IsRequired": true
       },
       {

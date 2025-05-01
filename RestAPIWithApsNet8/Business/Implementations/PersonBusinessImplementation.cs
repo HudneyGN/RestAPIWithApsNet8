@@ -1,4 +1,6 @@
-﻿using RestAPIWithApsNet8.Model;
+﻿using RestAPIWithApsNet8.Data.Converter.Implementations;
+using RestAPIWithApsNet8.Data.VO;
+using RestAPIWithApsNet8.Model;
 using RestAPIWithApsNet8.Repository;
 
 namespace RestAPIWithApsNet8.Business.Implementations
@@ -6,34 +8,41 @@ namespace RestAPIWithApsNet8.Business.Implementations
     public class PersonBusinessImplementation : IPersonBusiness
     {
         //private volatile int _count;
-        private readonly IPersonRepository _repository;
+        private readonly IRepository<Person> _repository;
 
-        public PersonBusinessImplementation(IPersonRepository repository)
+        private readonly PersonConverter _converter;
+
+        public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
         #region FindAll
-        public List<Person> FindAll()
+        public List<PersonVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.Parse(_repository.FindAll());
         }
         #endregion
         #region FindById
-        public Person FindById(long id)
+        public PersonVO FindById(long id)
         {
-            return _repository.FindById(id); // pesquisar SingleOrDefault(p => p.Id.Equals(id))
+            return _converter.Parse(_repository.FindById(id)); // pesquisar SingleOrDefault(p => p.Id.Equals(id))
         }
         #endregion
         #region Create
-        public Person Create(Person person)
+        public PersonVO Create(PersonVO person)
         {
-            return _repository.Create(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
         }
         #endregion
         #region Update
-        public Person Update(Person person)
+        public PersonVO Update(PersonVO person)
         {
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
         }
         #endregion
         #region Delete

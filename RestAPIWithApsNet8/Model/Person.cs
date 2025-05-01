@@ -4,10 +4,10 @@ using RestAPIWithApsNet8.Model.Base;
 namespace RestAPIWithApsNet8.Model
 {
     [Table("person")] // no linus não localiza a tabela person
-    public class Person 
+    public class Person: BaseEntity
     {
-        [Column("id")]
-        public long Id { get; set; }
+        //removido Id, herdando da BaseEntity
+
         [Column("first_name")]
         public string FirstName { get; set; }
         [Column("last_name")]

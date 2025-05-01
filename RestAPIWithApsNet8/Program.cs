@@ -6,7 +6,6 @@ using RestAPIWithApsNet8.Business.Implementations;
 using RestAPIWithApsNet8.Model.Context;
 using RestAPIWithApsNet8.Repository;
 using RestAPIWithApsNet8.Repository.Generic;
-using RestAPIWithApsNet8.Repository.Implementations;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,7 +29,7 @@ builder.Services.AddApiVersioning();
 
 // Dependency Injection for Person 
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+//builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
 // Dependency Injection for Books 
 builder.Services.AddScoped<IBooksBusiness, BooksBusinessImplementation>();
