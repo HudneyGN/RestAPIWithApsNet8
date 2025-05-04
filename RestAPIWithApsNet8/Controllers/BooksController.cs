@@ -2,6 +2,7 @@ using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using RestAPIWithApsNet8.Business;
 using RestAPIWithApsNet8.Data.VO;
+using RestAPIWithApsNet8.Hypermedia.Filters;
 using RestAPIWithApsNet8.Model;
 
 namespace RestAPIWithApsNet8.Controllers
@@ -21,11 +22,13 @@ namespace RestAPIWithApsNet8.Controllers
         }
 
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_bookservice.FindAll());
         }
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var book = _bookservice.FindById(id);
@@ -33,12 +36,14 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(book);
         }
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] BooksVO book)
         {
             if (book == null) return BadRequest("Book Invalid");
             return Ok(_bookservice.Create(book));
         }
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] BooksVO book)
         {
             if (book == null) return BadRequest("Book Invalid");

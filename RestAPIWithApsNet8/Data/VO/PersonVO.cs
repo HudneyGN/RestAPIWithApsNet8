@@ -1,10 +1,11 @@
-﻿using System.Text.Json.Serialization;
+﻿using RestAPIWithApsNet8.Hypermedia;
+using RestAPIWithApsNet8.Hypermedia.Abstract;
 
 namespace RestAPIWithApsNet8.Data.VO;
 
-public class PersonVO
+public class PersonVO : ISupportsHyperMedia
 {
-   // [JsonPropertyName ("Code")]  as do MySql
+    // [JsonPropertyName ("Code")]  as do MySql
     public long Id { get; set; }
 
     public string FirstName { get; set; }
@@ -14,4 +15,5 @@ public class PersonVO
     public string Address { get; set; }
 
     public string Gender { get; set; }
+    public List<HypermediaLink> Links { get; set; } = new List<HypermediaLink>();
 }

@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\hypermedia\\enricher\\booksenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\hypermedia\\enricher\\booksenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\hypermedia\\enricher\\personenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\hypermedia\\enricher\\personenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\hypermedia\\hypermedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\hypermedia\\hypermedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PersonVO.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Data\\VO\\PersonVO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "HypermediaLink.cs",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\HypermediaLink.cs",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Hypermedia\\HypermediaLink.cs",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\HypermediaLink.cs",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Hypermedia\\HypermediaLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T00:58:54.401Z",
+              "WhenOpened": "2025-05-04T01:51:18.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonEnricher.cs",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDUAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T01:51:14.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BooksEnricher.cs",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\Enricher\\BooksEnricher.cs",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Hypermedia\\Enricher\\BooksEnricher.cs",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Hypermedia\\Enricher\\BooksEnricher.cs",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Hypermedia\\Enricher\\BooksEnricher.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T01:51:02.219Z",
               "EditorCaption": ""
             }
           ]
