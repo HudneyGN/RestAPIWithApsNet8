@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\repository\\generic\\genericrepositoy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\repository\\generic\\genericrepositoy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\repository\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\repository\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|d:\\cursos\\udemy\\api rest\\restapiwithapsnet8\\restapiwithapsnet8\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB06DC8B-DFEE-4E99-8FC1-DD5B3BAFCC4A}|RestAPIWithApsNet8\\RestAPIWithApsNet8.csproj|solutionrelative:restapiwithapsnet8\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Repository\\Generic\\GenericRepository.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Repository\\Generic\\GenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:01:31.803Z",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RestAPIWithApsNet8\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-11T02:54:08.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GenericRepositoy.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\GenericRepositoy.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Repository\\Generic\\GenericRepositoy.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\GenericRepositoy.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Repository\\Generic\\GenericRepositoy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:01:28.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\IRepository.cs",
-              "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Repository\\Generic\\IRepository.cs",
-              "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Repository\\Generic\\IRepository.cs",
-              "RelativeToolTip": "RestAPIWithApsNet8\\Repository\\Generic\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:01:23.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Program.cs",
               "RelativeDocumentMoniker": "RestAPIWithApsNet8\\Program.cs",
               "ToolTip": "D:\\Cursos\\Udemy\\API Rest\\RestAPIWithApsNet8\\RestAPIWithApsNet8\\Program.cs",
               "RelativeToolTip": "RestAPIWithApsNet8\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:00:58.642Z"
+              "WhenOpened": "2025-06-11T02:32:01.6Z",
+              "EditorCaption": ""
             }
           ]
         }

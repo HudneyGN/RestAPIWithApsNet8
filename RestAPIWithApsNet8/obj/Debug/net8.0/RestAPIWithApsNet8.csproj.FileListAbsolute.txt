@@ -67,3 +67,7 @@ D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\
 D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\System.Text.Json.dll
 D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Cursos\Udemy\API Rest\RestAPIWithApsNet8\RestAPIWithApsNet8\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

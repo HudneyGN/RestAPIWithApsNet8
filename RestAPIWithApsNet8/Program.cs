@@ -1,7 +1,9 @@
 using System.Net.Http.Headers;
 using EvolveDb;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using RestAPIWithApsNet8.Business;
 using RestAPIWithApsNet8.Business.Implementations;
@@ -46,6 +48,24 @@ builder.Services.AddSingleton(filterOptions);
 //Versionando API
 builder.Services.AddApiVersioning();
 
+//AddSwagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1",
+        new OpenApiInfo
+        {
+            Title = "Rest API's With AspNetCore 8 and Docker",
+            Version = "v1",
+            Description = "API Restfull developed 'est API's With AspNetCore 8 and Docker'",
+            Contact = new OpenApiContact
+            {
+                Name = "Hudney Gomes Nunes",
+                 Url = new Uri("https://www.linkedin.com/in/hudney-gomes-nunes/"),
+
+            }
+        });
+});
+
 // Dependency Injection for Person 
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 //builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
@@ -63,9 +83,23 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+//Swagger
+
+app.UseSwagger();
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json",
+        "est API's With AspNetCore 8 and Docker - v1");
+});
+var options = new RewriteOptions();
+options.AddRedirect("^$", "swagger");
+app.UseRewriter(options);
+
 app.UseAuthorization();
 
 app.MapControllers();
+
 app.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/{id?}"); // created today 03/05
 
 app.Run();
