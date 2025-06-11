@@ -19,6 +19,7 @@
     <li><a href="https://github.com/leonardoporro/evolve" target="_blank">Evolve DB</a></li>
     <li><a href="https://serilog.net/" target="_blank">Serilog</a></li>
     <li><a href="https://martinfowler.com/bliki/ValueObject.html" target="_blank">Value Object - Martin Fowler</a></li>
+    <li><a href="https://swagger.io/" target="_blank">Swagger</a></li>
   </ul>
 
   <hr>
