@@ -1,0 +1,30 @@
+# Ignore arquivos e pastas do Visual Studio
+.vs/
+*.suo
+
+# Ignore binários e builds
+bin/
+obj/
+out/
+
+# Ignore pacotes
+*.nupkg
+*.snupkg
+packages/
+*.symbols.nupkg
+
+# Ignore arquivos de log
+*.log
+
+# Configurações do sistema
+*.DS_Store
+Thumbs.db
+
+# Arquivos do Rider / JetBrains
+.idea/
+
+# User secrets
+secrets.json
+
+# Configuração local
+*.vscode/
