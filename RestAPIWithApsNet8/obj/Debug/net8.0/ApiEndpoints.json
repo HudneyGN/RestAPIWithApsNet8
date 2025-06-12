@@ -2,7 +2,7 @@
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Get",
-    "RelativePath": "api/Books/v{version}",
+    "RelativePath": "api/books/v{version}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -13,12 +13,51 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RestAPIWithApsNet8.Data.VO.BooksVO, RestAPIWithApsNet8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Post",
-    "RelativePath": "api/Books/v{version}",
+    "RelativePath": "api/books/v{version}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -34,12 +73,46 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.BooksVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Put",
-    "RelativePath": "api/Books/v{version}",
+    "RelativePath": "api/books/v{version}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -55,12 +128,46 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.BooksVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Get",
-    "RelativePath": "api/Books/v{version}/{id}",
+    "RelativePath": "api/books/v{version}/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -76,12 +183,51 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.BooksVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Delete",
-    "RelativePath": "api/Books/v{version}/{id}",
+    "RelativePath": "api/books/v{version}/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -97,12 +243,40 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.PersonController",
     "Method": "Get",
-    "RelativePath": "api/Person/v{version}",
+    "RelativePath": "api/person/v{version}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -113,12 +287,51 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RestAPIWithApsNet8.Data.VO.PersonVO, RestAPIWithApsNet8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.PersonController",
     "Method": "Post",
-    "RelativePath": "api/Person/v{version}",
+    "RelativePath": "api/person/v{version}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -134,12 +347,46 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.PersonVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.PersonController",
     "Method": "Put",
-    "RelativePath": "api/Person/v{version}",
+    "RelativePath": "api/person/v{version}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -155,12 +402,46 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.PersonVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.PersonController",
     "Method": "Get",
-    "RelativePath": "api/Person/v{version}/{id}",
+    "RelativePath": "api/person/v{version}/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -176,12 +457,51 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "RestAPIWithApsNet8.Data.VO.PersonVO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "RestAPIWithApsNet8.Controllers.PersonController",
     "Method": "Delete",
-    "RelativePath": "api/Person/v{version}/{id}",
+    "RelativePath": "api/person/v{version}/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -197,6 +517,34 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 401
+      }
+    ]
   }
 ]

@@ -4,6 +4,7 @@ using RestAPIWithApsNet8.Business;
 using RestAPIWithApsNet8.Data.VO;
 using RestAPIWithApsNet8.Hypermedia.Filters;
 using RestAPIWithApsNet8.Model;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace RestAPIWithApsNet8.Controllers
 {
@@ -22,12 +23,20 @@ namespace RestAPIWithApsNet8.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(List<BooksVO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_bookservice.FindAll());
         }
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(BooksVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
@@ -36,6 +45,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(book);
         }
         [HttpPost]
+        [ProducesResponseType(typeof(BooksVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] BooksVO book)
         {
@@ -43,6 +55,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(_bookservice.Create(book));
         }
         [HttpPut]
+        [ProducesResponseType(typeof(BooksVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] BooksVO book)
         {
@@ -50,6 +65,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(_bookservice.Update(book));
         }
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Delete(long id)
         {
             _bookservice.Delete(id);

@@ -22,12 +22,20 @@ namespace RestAPIWithApsNet8.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(List<PersonVO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_personService.FindAll());
         }
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
@@ -36,6 +44,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(person);
         }
         [HttpPost]
+        [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] PersonVO person)
         {
@@ -43,6 +54,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(_personService.Create(person));
         }
         [HttpPut]
+        [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] PersonVO person)
         {
@@ -50,6 +64,9 @@ namespace RestAPIWithApsNet8.Controllers
             return Ok(_personService.Update(person));
         }
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         //[TypeFilter(typeof(HyperMediaFilter))] delete não precisa
         public IActionResult Delete(long id)
         {
