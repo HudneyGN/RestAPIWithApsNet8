@@ -1,17 +1,27 @@
+using System.Configuration;
 using System.Net.Http.Headers;
 using EvolveDb;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using RestAPIWithApsNet8.Business;
 using RestAPIWithApsNet8.Business.Implementations;
+using RestAPIWithApsNet8.Configurations;
 using RestAPIWithApsNet8.Hypermedia.Enricher;
 using RestAPIWithApsNet8.Hypermedia.Filters;
 using RestAPIWithApsNet8.Model.Context;
 using RestAPIWithApsNet8.Repository;
 using RestAPIWithApsNet8.Repository.Generic;
+using RestAPIWithApsNet8.Services;
+using RestAPIWithApsNet8.Services.Implementations;
 using Serilog;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
+
 
 
 internal class Program
@@ -24,6 +34,41 @@ internal class Program
         var appDescription = $"API Restfull developed '{appName}'";
 
         // Add services to the container.
+
+        //variaveis para autentications
+        var tokenConfigurations = new TokenConfiguration();
+        new ConfigureFromConfigurationOptions<TokenConfiguration>(
+            builder.Configuration.GetSection("TokenConfigurations")
+            )
+            .Configure(tokenConfigurations);
+
+        builder.Services.AddSingleton(tokenConfigurations);
+
+        builder.Services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = tokenConfigurations.Issuer,
+                    ValidAudience = tokenConfigurations.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret))
+                };
+            });
+
+        builder.Services.AddAuthorization(auth =>
+        {
+            auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                .RequireAuthenticatedUser().Build());
+        });
 
         builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
@@ -80,16 +125,17 @@ internal class Program
         //Versionando API
         builder.Services.AddApiVersioning();
 
-        // Dependency Injection for Person 
+        // Dependency Injection 
         builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-        //builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
-
-        // Dependency Injection for Books 
         builder.Services.AddScoped<IBooksBusiness, BooksBusinessImplementation>();
-        //builder.Services.AddScoped<IBooksRepository, BooksRepositoryImplementation>(); Removed
+        builder.Services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
+
+        builder.Services.AddTransient<ITokenServices, TokenService>();
+
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
 
         // Dependency Injection for Generics
-        builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepositoy<>));
+        builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
         var app = builder.Build();
 

@@ -1,5 +1,68 @@
 [
   {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/auth/v{version}/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenVO",
+        "Type": "RestAPIWithApsNet8.Data.VO.TokenVO",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.AuthController",
+    "Method": "Revoke",
+    "RelativePath": "api/auth/v{version}/revoke",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenVO",
+        "Type": "RestAPIWithApsNet8.Data.VO.TokenVO",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestAPIWithApsNet8.Controllers.AuthController",
+    "Method": "Signin",
+    "RelativePath": "api/auth/v{version}/signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "RestAPIWithApsNet8.Data.VO.UserVO",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RestAPIWithApsNet8.Controllers.BooksController",
     "Method": "Get",
     "RelativePath": "api/books/v{version}",
