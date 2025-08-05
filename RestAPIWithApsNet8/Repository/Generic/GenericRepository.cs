@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using RestAPIWithApsNet8.Model.Base;
 using RestAPIWithApsNet8.Model.Context;
 
@@ -6,7 +7,7 @@ namespace RestAPIWithApsNet8.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private MySqlContext _context; 
+        protected MySqlContext _context;
 
         private DbSet<T> dataset;
 
@@ -60,6 +61,26 @@ namespace RestAPIWithApsNet8.Repository.Generic
         public T FindById(long id)
         {
             return dataset.SingleOrDefault(p => p.Id.Equals(id));
+        }
+
+        public List<T> FindWithPagedSearch(string query)
+        {
+            return dataset.FromSqlRaw<T>(query).ToList();
+
+        }
+        public int GetCount(string query)
+        {
+            var result = "";
+            using (var connection = _context.Database.GetDbConnection())
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+                    result = command.ExecuteScalar().ToString();
+                }
+            }
+            return Convert.ToInt32(result);
         }
 
         public T Update(T item)

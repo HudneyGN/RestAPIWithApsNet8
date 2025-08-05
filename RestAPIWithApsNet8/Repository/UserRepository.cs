@@ -14,7 +14,7 @@ namespace RestAPIWithApsNet8.Repository
         {
             _context = context;
         }
-        public User? ValidateCredentials(UserVO user)
+        public User ValidateCredentials(UserVO user)
         {
             var pass = ComputeHash(user.Password, SHA256.Create());
             return _context.Users.FirstOrDefault(u => 
@@ -22,7 +22,7 @@ namespace RestAPIWithApsNet8.Repository
             && u.Password == pass);
             // verificar o return _context.users.FirstOrDefault o users do MySqlContext
         }
-        public User? RefreshUserInfo(User? user)
+        public User RefreshUserInfo(User user)
         {
             if (!_context.Users.Any(u => u.Id.Equals(user.Id))) return null;
 

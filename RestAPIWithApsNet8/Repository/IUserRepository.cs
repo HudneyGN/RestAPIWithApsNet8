@@ -12,6 +12,6 @@ namespace RestAPIWithApsNet8.Repository
 
         bool RevokeToken(string username);
 
-        User? RefreshUserInfo(User user);
+        User RefreshUserInfo(User user);
     }
 }

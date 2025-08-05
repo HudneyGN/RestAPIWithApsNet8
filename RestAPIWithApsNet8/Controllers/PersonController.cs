@@ -1,3 +1,4 @@
+using System.Globalization;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,16 +24,17 @@ namespace RestAPIWithApsNet8.Controllers
             _personService = personService;
         }
 
-        [HttpGet]
+        [HttpGet("{sortDirection}/{pagesize}/{page}")]
         [ProducesResponseType(typeof(List<PersonVO>), StatusCodes.Status200OK)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery] string name, string sortDirection, int pageSize, int page)
         {
-            return Ok(_personService.FindAll());
+            return Ok(_personService.FindWithPagedSearch(sortDirection, sortDirection, pageSize, page));
         }
+
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
         [ProducesResponseType(204)]
@@ -44,7 +46,20 @@ namespace RestAPIWithApsNet8.Controllers
             var person = _personService.FindById(id);
             if (person == null) return NotFound("Person Invalid");
             return Ok(person);
+        } 
+        [HttpGet("findPersonByName")]
+        [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Get([FromQuery]string firstName, string lastName)
+        {
+            var person = _personService.FindByName(firstName, lastName);
+            if (person == null) return NotFound("Person Invalid");
+            return Ok(person);
         }
+
         [HttpPost]
         [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
         [ProducesResponseType(400)]
@@ -55,6 +70,7 @@ namespace RestAPIWithApsNet8.Controllers
             if (person == null) return BadRequest("Person Invalid");
             return Ok(_personService.Create(person));
         }
+
         [HttpPut]
         [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
         [ProducesResponseType(400)]
@@ -65,6 +81,19 @@ namespace RestAPIWithApsNet8.Controllers
             if (person == null) return BadRequest("Person Invalid");
             return Ok(_personService.Update(person));
         }
+
+        [HttpPatch("{id}")]
+        [ProducesResponseType(typeof(PersonVO), StatusCodes.Status200OK)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Patch(long id)
+        {
+            var person = _personService.Disable(id);
+            return Ok(person);
+        }
+
         [HttpDelete("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

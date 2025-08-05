@@ -38,6 +38,14 @@ namespace RestAPIWithApsNet8.Hypermedia.Enricher
 
             content.Links.Add(new HypermediaLink()
             {
+                Action = HttpActionVerb.PATCH,
+                Href = link,
+                Rel = RelationsType.self,
+                Type = ResponseTypeFormat.DefaultPatch
+            });
+
+            content.Links.Add(new HypermediaLink()
+            {
                 Action = HttpActionVerb.DELETE,
                 Href = link,
                 Rel = RelationsType.self,

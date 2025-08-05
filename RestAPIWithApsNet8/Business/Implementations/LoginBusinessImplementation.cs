@@ -11,15 +11,15 @@ namespace RestAPIWithApsNet8.Business.Implementations
     public class LoginBusinessImplementation : ILoginBusiness
     {
         private const string DATE_FORMAT = "yyyy-MM-dd:mm:ss";
-        private TokenConfiguration _configurations;
+        private TokenConfiguration _configuration;
         private IUserRepository _repository;
-        private readonly ITokenServices _tokenServices;
+        private readonly ITokenServices _tokenService;
 
-        public LoginBusinessImplementation(TokenConfiguration configurations, IUserRepository repository, ITokenServices tokenServices)
+        public LoginBusinessImplementation(TokenConfiguration configuration, IUserRepository repository, ITokenServices tokenService)
         {
-            _configurations = configurations;
+            _configuration = configuration;
             _repository = repository;
-            _tokenServices = tokenServices;
+            _tokenService = tokenService;
         }
 
         public TokenVO ValidateCredentials(UserVO userCredentials)
@@ -30,18 +30,19 @@ namespace RestAPIWithApsNet8.Business.Implementations
             {
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
+                // estudar mais sobre as Claim
             };
             
-            var acessToken = _tokenServices.GenerateAccessToken(claims);
-            var refreshToken = _tokenServices.GenerateRefreshToken();
+            var acessToken = _tokenService.GenerateAccessToken(claims);
+            var refreshToken = _tokenService.GenerateRefreshToken();
 
             user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configurations.DaysToexpiry);
+            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configuration.DaysToexpiry);
 
             _repository.RefreshUserInfo(user);
 
             DateTime createDate = DateTime.Now;
-            DateTime expirationDate = createDate.AddMinutes(_configurations.Minutes);
+            DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
 
             return 
                 new TokenVO
@@ -59,7 +60,7 @@ namespace RestAPIWithApsNet8.Business.Implementations
             var acessToken = token.Acesstokrn;
             var refreshToken = token.RefreshToken;
 
-            var principal = _tokenServices.GetPrincipalFromExpiredToken(acessToken);
+            var principal = _tokenService.GetPrincipalFromExpiredToken(acessToken);
 
             var userName = principal.Identity.Name;
 
@@ -71,15 +72,15 @@ namespace RestAPIWithApsNet8.Business.Implementations
                 user.RefreshTokenExpiryTime <=
                 DateTime.Now) return null;
 
-            acessToken = _tokenServices.GenerateAccessToken(principal.Claims);
-            refreshToken = _tokenServices.GenerateRefreshToken();
+            acessToken = _tokenService.GenerateAccessToken(principal.Claims);
+            refreshToken = _tokenService.GenerateRefreshToken();
 
             user.RefreshToken = refreshToken;
 
             _repository.RefreshUserInfo(user);
 
             DateTime createDate = DateTime.Now;
-            DateTime expirationDate = createDate.AddMinutes(_configurations.Minutes);
+            DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
 
             return
                 new TokenVO
@@ -98,3 +99,6 @@ namespace RestAPIWithApsNet8.Business.Implementations
         }
     }
 }
+
+
+

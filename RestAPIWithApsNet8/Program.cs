@@ -1,4 +1,3 @@
-using System.Configuration;
 using System.Net.Http.Headers;
 using EvolveDb;
 using Microsoft.AspNetCore.Authorization;
@@ -21,8 +20,6 @@ using RestAPIWithApsNet8.Services.Implementations;
 using Serilog;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
-
-
 
 internal class Program
 {
@@ -133,6 +130,7 @@ internal class Program
         builder.Services.AddTransient<ITokenServices, TokenService>();
 
         builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
         // Dependency Injection for Generics
         builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
